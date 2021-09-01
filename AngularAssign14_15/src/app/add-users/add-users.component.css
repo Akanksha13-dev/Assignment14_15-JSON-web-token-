@@ -1,0 +1,40 @@
+
+  
+    
+  
+  .border-customized-input {
+    border: 2px solid #eee;
+ }
+ input[type=text],select[type=text],input[type=datetime-local] {
+    padding:15px;
+    border:0;
+    margin:10px 0; 
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    width:100%;
+    background-color: bisque;
+  }
+  #wer{
+
+    border: solid 6px #DDD;
+    border-collapse: collapse;
+    padding: 16px 16px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    
+    text-align: center;
+      border: solid;
+      color: black;
+    
+  }
+  .but{text-align: center;}
+  label {
+    display: block;
+    font-size: x-large;
+    font-style: italic;
+    width: 156px;
+    cursor: pointer;
+    padding-right: 6px;
+    padding-bottom: 1px;
+  }

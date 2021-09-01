@@ -1,0 +1,23 @@
+<form style="padding: 2%;" (ngSubmit)="onSubmit()">
+  <div style="width: 400px; margin: auto;">
+    <h2 style="text-align: center;">LoginForm</h2><br>
+  <div class="form-group">
+      <label for="loginEmail">Email</label>
+      <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" [(ngModel)]="credentials.email" name="loginEmail">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <br>
+  <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" class="form-control" id="loginPassword" placeholder="Password" [(ngModel)]="credentials.password" name="loginPassword">
+  </div>
+  <br>
+  <div class='but'>
+  <button type="submit" class="btn btn-primary" id="wer">Submit</button>
+</div>
+  <br>
+  <br>
+  
+  
+  </div>
+</form>

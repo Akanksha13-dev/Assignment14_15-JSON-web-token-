@@ -1,0 +1,42 @@
+
+<div class="but">
+    <button (click)="retrieveCustomers($event.target)" id='wer'>Load Data</button>
+    </div>
+    <div *ngIf="customers">
+        <h1>Customers Table</h1>
+        <table>
+           <thead>
+              <tr>
+               <th>ID</th>
+               <th>Name</th>
+               <th>Address</th>
+               <th>Website</th>
+              </tr>
+           </thead>
+           <tbody>
+              <!-- <tr *ngFor="let item of users"> -->
+               
+               <tr *ngFor="let item of customers">
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.address }}</td>
+                  <td>{{ item.website }}</td>
+                  <td>
+                    
+                    <button type="button" (click)='toUsers(item.id)' class="nav-link">Show-Users</button>
+                    </td>
+                  
+                 <td>
+                    
+                    <button type="button" ><a routerLink="{{item.id}}" class="nav-link">Edit</a></button>
+                    <!-- <div class="container mt-3">
+                        <router-outlet></router-outlet>
+                      </div> -->
+                 </td>
+                 <div class="container mt-3">
+                    <router-outlet></router-outlet>
+                  </div>
+              </tr>
+           </tbody>
+        </table>
+     </div>
