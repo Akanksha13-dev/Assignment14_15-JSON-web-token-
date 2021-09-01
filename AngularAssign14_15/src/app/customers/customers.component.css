@@ -1,0 +1,26 @@
+#wer{
+
+    border: solid 6px #DDD;
+    border-collapse: collapse;
+    padding: 16px 16px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    
+    text-align: center;
+      border: solid;
+      color: black;
+    
+  }
+  .but{text-align: center;}
+  table,th,td{
+    
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 16px 16px;
+    margin-left:auto;
+    margin-right:auto;
+    
+    text-align: center;
+  }
+  table{table-layout: fixed;}
