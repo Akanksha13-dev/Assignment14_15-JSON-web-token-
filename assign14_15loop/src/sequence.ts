@@ -13,7 +13,6 @@ import {
 } from 'loopback4-authorization';
 import {PermissionKey} from './authorization/permission.enum';
 import {TokenServiceBindings, UserServiceBindings} from './keys';
-import {Roles, Userz} from './models';
 import {RolesRepository, UserzRepository} from './repositories';
 import {JWTService} from './services/jwt.service';
 import {MyUserService} from './services/User.service';
@@ -80,13 +79,11 @@ export class MySequence implements SequenceHandler {
                 //convert token to Userprofile to fetch user id
                 const userProfile: UserProfile = await this.jwtService.verifyToken(userToken);
 
-                //Fetching  user with that user id
-                const user: Userz = await this.userRepository.findById(userProfile.id);
-                // user permission are fetched
-                const role: Roles = await this.roleRepository.findById(user.role);
-
-                if (role.permissions.length > 0) {
-                    permissions = [...permissions, ...(role.permissions)]
+                //Fetching  user with that user id including roles
+                const user: any = await this.userRepository.findById(userProfile.id, {include: ['roles']});
+               
+                if (user.roles.permissions.length > 0) {
+                    permissions = [...permissions, ...(user.roles.permissions)]
                 }
 
 
